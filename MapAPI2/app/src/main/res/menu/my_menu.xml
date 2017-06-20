@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/icon_search"
+        android:orderInCategory="1"
+        android:title="User"
+        android:icon="@drawable/icon_search"
+        app:showAsAction="ifRoom"></item>
+    <item
+        android:id="@+id/icon_hospital"
+        android:title="Hospital"
+        android:orderInCategory="0"
+        android:icon="@drawable/hospital"
+        app:showAsAction="ifRoom"></item>
+    <item
+        android:id="@+id/sizeFont"
+        android:title="Change Font Size"
+        >
+      <menu>
+          <item
+              android:id="@+id/change_12sp"
+              android:title="12">
+          </item>
+          <item
+              android:id="@+id/change_15sp"
+              android:title="15">
+          </item>
+          <item
+              android:id="@+id/change_20sp"
+              android:title="20">
+          </item>
+      </menu>
+    </item>
+
+</menu>

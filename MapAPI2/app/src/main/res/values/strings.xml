@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Map API 2</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="dropen">Open</string>
+    <string name="drclose">close</string>
+    <string name="title_network">Thông Báo</string>
+    <string name="message_network">Please connect to a network and try again</string>
+    <string name="btn_network">OK</string>
+    <string-array name="listkhoa">
+        <item>Khoa lâm sàn</item>
+        <item>Khoa y học cổ truyền</item>
+        <item>Khoa sản</item>
+        <item>Khoa ngoại tổng quát</item>
+        <item>Khoa răng hàm mặt</item>
+        <item>Khoa hô hấp tiêu hóa</item>
+        <item>Khoa tim</item>
+        <item>Khoa ngoại</item>
+        <item>Khoa nội</item>
+        <item>Khoa nhi</item>
+        <item>Khoa khoa thần kinh</item>
+    </string-array>
+</resources>
