@@ -1,11 +1,7 @@
-package abstractFactory;
+package Exercise;
 
-import java.awt.List;
 import java.util.ArrayList;
-import java.util.MissingFormatArgumentException;
 import java.util.Stack;
-
-import javax.swing.plaf.synth.SynthSplitPaneUI;
 
 public class StackSingleton {
 	private static Stack<String> addActionInstance;
@@ -39,11 +35,46 @@ public class StackSingleton {
 		stackSingleton.addActionstance();
 	}
 
-	public void removeShape(MainMethod mainMethod) {
+	public void removeShapeCircle(MainMethod mainMethod) {
+		boolean delete = false;
 		System.out.println("remove " + mainMethod);
-		listShape.remove(mainMethod);
-		stackRemoveShape.push(mainMethod);
-		stackSingleton.removeActionstance();
+		for (int i = 0; i < listShape.size(); i++) {
+			MainMethod tam = (MainMethod) listShape.get(i);
+			if (tam instanceof Circle) {
+				Circle tam2 = (Circle) mainMethod;
+				if (((Circle) tam).getPosition() == tam2.getPosition()) {
+					listShape.remove(i);
+					delete = true;
+				}
+			}
+
+		}
+		if (delete) {
+			stackRemoveShape.push(mainMethod);
+			stackSingleton.removeActionstance();
+		}
+
+	}
+
+	public void removeShapeRectangle(MainMethod mainMethod) {
+		boolean delete = false;
+		System.out.println("remove " + mainMethod);
+		for (int i = 0; i < listShape.size(); i++) {
+			MainMethod tam = (MainMethod) listShape.get(i);
+			if (tam instanceof Rectangle) {
+				Rectangle tam2 = (Rectangle) mainMethod;
+				if (((Rectangle) tam).getPosition() == tam2.getPosition()) {
+					listShape.remove(i);
+					delete = true;
+				}
+			}
+
+		}
+		if(delete){
+			stackRemoveShape.push(mainMethod);
+			stackSingleton.removeActionstance();
+		}
+		
 	}
 
 	public void removeActionstance() {
