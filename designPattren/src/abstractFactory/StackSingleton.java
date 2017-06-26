@@ -1,11 +1,7 @@
-package abstractFactory;
+package ExcercisePattern;
 
-import java.awt.List;
 import java.util.ArrayList;
-import java.util.MissingFormatArgumentException;
 import java.util.Stack;
-
-import javax.swing.plaf.synth.SynthSplitPaneUI;
 
 public class StackSingleton {
 	private static Stack<String> addActionInstance;
@@ -39,9 +35,28 @@ public class StackSingleton {
 		stackSingleton.addActionstance();
 	}
 
-	public void removeShape(MainMethod mainMethod) {
+	public void removeShapeCircle(MainMethod mainMethod) {
 		System.out.println("remove " + mainMethod);
-		listShape.remove(mainMethod);
+		for (int i = 0; i < listShape.size(); i++) {
+			Circle tam = (Circle) listShape.get(i);
+			Circle tam2 = (Circle) mainMethod;
+			if (tam.getPosition() == tam2.getPosition()) {
+				listShape.remove(i);
+			}
+		}
+		stackRemoveShape.push(mainMethod);
+		stackSingleton.removeActionstance();
+	}
+
+	public void removeShapeRectangle(MainMethod mainMethod) {
+		System.out.println("remove " + mainMethod);
+		for (int i = 0; i < listShape.size(); i++) {
+			Rectangle tam = (Rectangle) listShape.get(i);
+			Rectangle tam2 = (Rectangle) mainMethod;
+			if (tam.getPosition() == tam2.getPosition()) {
+				listShape.remove(i);
+			}
+		}
 		stackRemoveShape.push(mainMethod);
 		stackSingleton.removeActionstance();
 	}
@@ -94,10 +109,9 @@ public class StackSingleton {
 	}
 
 	public void PrintShape() {
-		System.out.println("***********printl list of Shape******************");
+		System.out.println("***********printl list of Shape 2D and 3D******************");
 		for (Object maint : listShape) {
 			System.out.println(maint.toString());
 		}
 	}
-
 }
